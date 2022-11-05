@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Variables */
 :root {
     /* Font */
     font-size: 18px;
     --font-primary: 'Urbanist', sans-serif;
+    --btn-font-size: 1.1rem;
+    --hero-font-size: 4rem;
+    --hero-description-font-size: 1.4rem;
+    --stores-section-title-font-size: 1.5rem;
+    --footer-font-size: 0.9rem;
 
     /* Colors */
     --color-primary: #2e75ff;
@@ -20,18 +26,13 @@ body {
     font-family: var(--font-primary);
 }
 
+button {
+    font-family: var(--font-primary);
+}
+
+/* Utilities */
 .container {
     padding: 2rem 7.5rem;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .navbar-brand .brand-img {
-    width: 200px;
 }
 
 .btn {
@@ -40,7 +41,7 @@ body {
     color: var(--color-white);
     border: none;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: var(--btn-font-size);
     font-weight: 400;
     padding: 0.6rem 1.7rem;
     transition: var(--transition-md);
@@ -51,9 +52,87 @@ body {
     color: var(--color-primary);
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand .brand-img {
+    width: 200px;
+}
+
+/* Hero section */
+.hero-section {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.hero-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--hero-font-size);
+    font-weight: 550;
+    margin-bottom: 0rem;
+}
+
+.hero-title .hero-title-logo {
+    width: 90px;
+    margin-right: 0.4rem;
+}
+
+.hero-title span {
+    font-weight: 300;
+    margin-left: 0.8rem;
+}
+
+/* Hero section secondary */
+.hero-title-secondary {
+    font-size: var(--hero-font-size);
+    margin-top: 0rem;
+}
+
+.hero-description-section h4 {
+    font-weight: 300;
+    font-size: var(--hero-description-font-size);
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.hero-img {
+    width: 530px;
+}
+
+/* Stores section */
+.stores-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stores-section-title {
+    font-size: var(--stores-section-title-font-size);
+    margin-top: 0rem;
+    margin-bottom: 2.5rem;
+}
+
+.stores-section-logos {
+    width: 320px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: var(--footer-font-size);
     margin-top: 6rem;
 }
 
