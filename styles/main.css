@@ -15,8 +15,15 @@
     --color-primary: #2e75ff;
     --color-primary-light: #edf3ff;
     --color-dark: #000000;
-    --color-grey: #393939;
+    --color-grey: #8f8f8f;
+    --color-grey-light: rgba(255, 255, 255, 0.71);
+    --color-grey-dark: #111111;
     --color-white: #ffffff;
+    --text-color: var(--color-dark);
+    --bg-color: var(var(--color-white));
+    --btn-bg-color: var(--color-primary);
+    --btn-text-color: var(--color-white);
+    --btn-hover-bg-color: var(--color-primary-light);
 
     /* Transitions */
     --transition-md: all 0.3s ease;
@@ -24,6 +31,8 @@
 
 body {
     font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 button {
@@ -37,8 +46,8 @@ button {
 
 .btn {
     cursor: pointer;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     border: none;
     border-radius: 8px;
     font-size: var(--btn-font-size);
@@ -48,7 +57,7 @@ button {
 }
 
 .btn:hover {
-    background-color: var(--color-primary-light);
+    background-color: var(--btn-hover-bg-color);
     color: var(--color-primary);
 }
 
@@ -138,4 +147,17 @@ footer {
 
 .footer-copy {
     margin: 3rem 0rem;
+}
+
+/* Dark mode */
+body.dark-mode {
+    --text-color: var(--color-white);
+    --bg-color: var(--color-grey-dark);
+    --btn-bg-color: var(--color-white);
+    --btn-text-color: var(--color-primary);
+    --btn-hover-bg-color: var(--color-grey-light);
+}
+
+body.dark-mode .footer-copy {
+    color: var(--color-grey);
 }
