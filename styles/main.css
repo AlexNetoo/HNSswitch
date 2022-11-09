@@ -25,8 +25,24 @@
     --btn-text-color: var(--color-white);
     --btn-hover-bg-color: var(--color-primary-light);
 
+    /* Images */
+    --hero-title-logo-size: 90px;
+    --hero-app-img-size: 530px;
+    --brand-img-size: 200px;
+    --stores-section-img-size: 320px;
+
+    /* Utilities */
+    --container-width: 80%;
+    --hero-title-section-gap: 3.5rem;
+
     /* Transitions */
     --transition-md: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -41,7 +57,10 @@ button {
 
 /* Utilities */
 .container {
-    padding: 2rem 7.5rem;
+    width: var(--container-width);
+    margin-top: 2.5rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .btn {
@@ -49,10 +68,10 @@ button {
     background-color: var(--btn-bg-color);
     color: var(--btn-text-color);
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: var(--btn-font-size);
-    font-weight: 400;
-    padding: 0.6rem 1.7rem;
+    font-weight: 500;
+    padding: 8px 20px 8px 20px;
     transition: var(--transition-md);
 }
 
@@ -69,13 +88,17 @@ button {
 }
 
 .navbar .navbar-brand .brand-img {
-    width: 200px;
+    width: var(--brand-img-size);
 }
 
 /* Hero section */
 .hero-section {
     text-align: center;
     margin-top: 5rem;
+}
+
+.hero-title-section {
+    margin-bottom: var(--hero-title-section-gap);
 }
 
 .hero-section > * {
@@ -112,7 +135,7 @@ button {
 }
 
 .hero-title .hero-title-logo {
-    width: 90px;
+    width: var(--hero-title-logo-size);
     margin-right: 0.4rem;
 }
 
@@ -141,7 +164,7 @@ button {
 }
 
 .hero-img {
-    width: 530px;
+    width: var(--hero-app-img-size);
 }
 
 /* Stores section */
@@ -172,18 +195,18 @@ button {
 }
 
 .stores-section-logos {
-    width: 320px;
+    width: var(--stores-section-img-size);
 }
 
 /* Footer */
 footer {
     text-align: center;
     font-size: var(--footer-font-size);
-    margin-top: 6rem;
+    margin-top: calc(var(--hero-title-section-gap) + 1.7rem);
 }
 
 .footer-copy {
-    margin: 3rem 0rem;
+    margin: 3rem 0rem 5rem 0rem;
 }
 
 /* Dark mode */
@@ -197,4 +220,41 @@ body.dark-mode {
 
 body.dark-mode .footer-copy {
     color: var(--color-grey);
+}
+
+/* Responsive */
+/* Large devices */
+@media (max-width: 992px) {
+    :root {
+        --hero-font-size: 3rem;
+        --hero-description-font-size: 1.2rem;
+        --hero-title-logo-size: 70px;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+    :root {
+        --hero-font-size: 2.5rem;
+        --hero-description-font-size: 1.1rem;
+        --hero-title-logo-size: 60px;
+        --stores-section-title-font-size: 1.2rem;
+        --brand-img-size: 160px;
+        --btn-font-size: 0.9rem;
+    }
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+    :root {
+        --hero-font-size: 1.5rem;
+        --hero-description-font-size: 1rem;
+        --hero-title-logo-size: 32px;
+        --stores-section-title-font-size: 1rem;
+        --hero-app-img-size: 320px;
+        --hero-title-section-gap: 2rem;
+        --brand-img-size: 150px;
+        --btn-font-size: 0.7rem;
+        --stores-section-img-size: 250px;
+    }
 }
