@@ -65,13 +65,14 @@ button {
 
 .btn {
     cursor: pointer;
+    text-decoration: none;
     background-color: var(--btn-bg-color);
     color: var(--btn-text-color);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: var(--btn-font-size);
-    font-weight: 500;
-    padding: 8px 20px 8px 20px;
+    font-weight: 450;
+    padding: 10px 20px 10px 20px;
     transition: var(--transition-md);
 }
 
@@ -94,7 +95,7 @@ button {
 /* Hero section */
 .hero-section {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .hero-title-section {
@@ -124,14 +125,8 @@ button {
 .hero-section > :nth-child(3) {
     animation: fadeIn 0.75s forwards 1.2s 1 linear;
 }
-
-.hero-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--hero-font-size);
-    font-weight: 550;
-    margin-bottom: 0rem;
+.hero-section > :nth-child(4) {
+    animation: fadeIn 0.75s forwards 1.5s 1 linear;
 }
 
 .hero-title .hero-title-logo {
@@ -151,7 +146,7 @@ button {
 }
 
 .hero-description-section h4 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: var(--hero-description-font-size);
     margin-top: 0rem;
     margin-bottom: 0.5rem;
@@ -160,7 +155,7 @@ button {
 .hero-img-container {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 1.5rem;
 }
 
 .hero-img {
@@ -173,6 +168,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 2.5rem;
 }
 
 .stores-section > * {
@@ -189,9 +185,19 @@ button {
 
 .stores-section-title {
     font-size: var(--stores-section-title-font-size);
-    font-weight: 350;
+    font-weight: 400;
     margin-top: 0rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stores-section-buttons-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-flow: column;
+}
+
+.stores-section-buttons-container .btn {
+    width: 200px;
 }
 
 .stores-section-logos {
