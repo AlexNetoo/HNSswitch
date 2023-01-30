@@ -34,6 +34,7 @@
     /* Utilities */
     --container-width: 80%;
     --hero-title-section-gap: 3.5rem;
+    --store-btn-size: 200px;
 
     /* Transitions */
     --transition-md: all 0.3s ease;
@@ -201,7 +202,7 @@ button {
 }
 
 .stores-section-buttons-container .btn {
-    width: 200px;
+    width: var(--store-btn-size);
 }
 
 .stores-section-logos {
@@ -266,5 +267,6 @@ body.dark-mode .footer-copy {
         --brand-img-size: 150px;
         --btn-font-size: 0.7rem;
         --stores-section-img-size: 250px;
+        --store-btn-size: 120px;
     }
 }
