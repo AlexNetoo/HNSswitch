@@ -213,7 +213,7 @@ button {
 footer {
     text-align: center;
     font-size: var(--footer-font-size);
-    margin-top: calc(var(--hero-title-section-gap) + 1.7rem);
+    margin-top: var(--hero-title-section-gap);
 }
 
 .footer-copy {
